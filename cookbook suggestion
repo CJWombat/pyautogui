@@ -1,0 +1,15 @@
+Suggested recepie for the cookbook to help users create screenshots
+
+import pyautogui
+
+print('This program will grab a screenshot for use in pyautogui')
+print('Do NOT click on any other screens when running the grab process')
+print('Hover the mouse and follow instructions')
+
+input('locate top left corner and press ENTER')
+x_top, y_top = pyautogui.position()
+
+input('locate bottom right corner and press ENTER')
+x_bot, y_bot = pyautogui.position()
+
+new_shot = pyautogui.screenshot('new_shot.png', region=(x_top,y_top,(x_bot - x_top),(y_bot - y_top)))
